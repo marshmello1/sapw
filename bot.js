@@ -1,4 +1,3 @@
-var prefix = "-";
 var adminprefix = '-'
 const developers = ["477923137863024655","346343289861046273"]
 client.on('message', message => {

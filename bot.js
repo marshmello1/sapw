@@ -1,11 +1,15 @@
-var adminprefix = '-'
-const developers = ["477923137863024655","346343289861046273"]
+const Discord = require("discord.js");
+const client = new Discord.Client();
+var prefix = "+";
+var adminprefix = '#'
+
+
+const developers = ["ID","ID"]
 client.on('message', message => {
-	
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsW ith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
@@ -24,9 +28,6 @@ client.on('message', message => {
     client.user.setGame(argresult, "https://www.twitch.tv/dream");
       message.channel.send(`**✅**`)
   }
-  if (message.content.startsWith(adminprefix + 'asd')) {
-      message.channel.send(`-setw Amine`)
-  }
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
@@ -38,4 +39,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login(process.env.TOKEN);
+client.login(process.env.BOT_TOKEN);

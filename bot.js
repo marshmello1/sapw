@@ -1,6 +1,6 @@
 var prefix = "-";
 var adminprefix = '-'
-const developers = ["507672310438821908","346343289861046273"]
+const developers = ["477923137863024655","477923137863024655"]
 client.on('message', message => {
 	
     var argresult = message.content.split(` `).slice(1).join(' ');

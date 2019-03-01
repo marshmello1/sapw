@@ -25,6 +25,9 @@ client.on('message', message => {
     client.user.setGame(argresult, "https://www.twitch.tv/dream");
       message.channel.send(`**✅**`)
   }
+  if (message.content.startsWith(adminprefix + 'asd')) {
+      message.channel.send(`-setw Amine`)
+  }
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
